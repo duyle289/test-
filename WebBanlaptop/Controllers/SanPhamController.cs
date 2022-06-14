@@ -23,7 +23,7 @@ namespace WebBanlaptop.Controllers
         }
         public ActionResult showSPNoiBat()
         {
-            
+
             return PartialView();
         }
         public ActionResult showSPPartial()
@@ -69,14 +69,14 @@ namespace WebBanlaptop.Controllers
             ViewBag.lstSP = lstSP;
             return View();
         }
-        public ActionResult chiTietSP(int? id)
+        /*public ActionResult chiTietSP(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             SANPHAM sp = db.SANPHAM.SingleOrDefault(n => n.MASP == id && n.TRANGTHAI == true);
-            var SPCungLoai = db.SANPHAM.Where(n=>n.MALSP == sp.MALSP).OrderByDescending(n=>n.DONGIA).Take(10);
+            var SPCungLoai = db.SANPHAM.Where(n => n.MALSP == sp.MALSP).OrderByDescending(n => n.DONGIA).Take(10);
             ViewBag.SPCungLoai = SPCungLoai;
             var NSX = db.NHASANXUAT.FirstOrDefault(p => p.MANSX == sp.MANSX);
             var maMau = db.CHITIETSP.Where(p => p.MASP == id).Select(p => p.MAMAU).ToList();
@@ -98,7 +98,7 @@ namespace WebBanlaptop.Controllers
                 return HttpNotFound();
             }
             return View(sp);
-        }
+        }*/
 
     }
 }
